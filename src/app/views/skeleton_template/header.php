@@ -51,5 +51,10 @@ if (empty($is_ajax)):
         <?php endif; ?>
     </div>
     <?php endif; ?>
+    <div class="flying-snitch">
+        <img src="<?= base_url() ?>static/images/ball-small.png" class="snitch">
+        <img src="<?= base_url() ?>static/images/left-small.png" class="wing left">
+        <img src="<?= base_url() ?>static/images/right-small.png" class="wing right">
+    </div>
     <div class="content-holder">
 <?php endif;
