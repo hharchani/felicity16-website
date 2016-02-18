@@ -15,7 +15,7 @@ var paths = {
     styles: 'src/static/styles/**/*.{scss,css}',
     scripts: 'src/static/scripts/**/*.js',
     images: 'src/static/images/**/*.{jpg,jpeg,png,svg}',
-    fonts: 'src/static/fonts/*',
+    fonts: 'src/static/fonts/**/*',
     php: 'src/**/*.{php,json,pem}',
     stuff: ['src/.htaccess', 'src/humans.txt', 'src/robots.txt', 'src/favicon.ico'],
     locale: ['src/locale/**/*'],
@@ -48,7 +48,6 @@ gulp.task('styles', function() {
             errorHandler: reportError
         }))
         .pipe(sass())
-        .on('error', reportError)
         .pipe(autoprefixer())
         .pipe(gulpif(args.deploy, minifyCss()))
         .pipe(gulp.dest(destination + '/static/styles'));
