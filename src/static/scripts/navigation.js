@@ -27,9 +27,10 @@ var updateAltUrls = function(pageName) {
         this.href = urlHelper.getAltPageUrl(pageName, this.lang);
     });
 };
-
+var showLanding;
+var localeBaseTitle = document.title.split(' · ').slice(-2).join(' · ');
 $(function () {
-    var localeBaseTitle = document.title.split(' · ').slice(-2).join(' · '),
+    var
         $body = $('body'),
         $document = $(document),
         $contentHolder = $('.content-holder');
@@ -70,7 +71,7 @@ $(function () {
         });
     };
 
-    var showLanding = function () {
+    showLanding = function () {
         closeLink($('.primary-nav-link.open'));
         $contentHolder.empty();
         $body.removeClass('page-open');
@@ -124,7 +125,7 @@ $(function () {
     var angle = 200 / $links.length;
     var curAngle = (200 - (200 - angle * ($links.length - 1)) / 2 - 10);
     $links.each(function() {
-        var transform = 'rotate(-' + curAngle + 'deg) translate(6em) rotate(' + curAngle + 'deg)';
+        var transform = 'rotate(-' + curAngle + 'deg) translate(6.5rem) rotate(' + curAngle + 'deg)';
         $(this).css({
             'transform' : transform
         });

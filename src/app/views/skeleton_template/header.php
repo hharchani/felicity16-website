@@ -34,8 +34,8 @@ if (empty($is_ajax)):
     <link rel="icon" href="<?= base_url() ?>favicon.ico">
     <link rel="stylesheet" href="<?= base_url() ?>static/styles/vendor/normalize.min.css">
     <link rel="stylesheet" href="<?= base_url() ?>static/styles/vendor/pure-forms-tables-buttons.css">
-    <link rel="stylesheet" href="<?= base_url() ?>static/styles/vendor/felicons.css?v=4">
-    <link rel="stylesheet" href="<?= base_url() ?>static/styles/core.css?v=4">
+    <link rel="stylesheet" href="<?= base_url() ?>static/fonts/css/felicons.css?v=5">
+    <link rel="stylesheet" href="<?= base_url() ?>static/styles/core.css?v=5">
     <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Flamenco|Noto+Sans">
     <script type="text/javascript">
         var baseUrl = '<?= base_url() ?>';
@@ -52,7 +52,7 @@ if (empty($is_ajax)):
     <article class="landing">
         <div class="landing-content">
             <p class="iiit-h">
-                <img src="<?= base_url() ?>static/images/iiit-logo.png" alt="IIIT H Logo"> <?= __('IIIT-H') ?>
+                <img src="<?= base_url() ?>static/images/iiit-logo.png" alt="IIIT H Logo"> <?= __('IIIT Hyderabad') ?>
             </p>
             <p class="presents">
                 <?= __('presents') ?>
@@ -75,7 +75,7 @@ if (empty($is_ajax)):
     <div class="auth-quick-links">
         <?php if ($is_authenticated): ?>
             <?php if (!empty($user_nick)): ?>
-                <div class="nick"><?= sprintf(__('Hello, %s'), $user_nick) ?> <a href="<?= locale_base_url() . "auth/logout/" ?>"><?= __('Logout') ?></a></div>
+                <div class="nick"><i class="icon-user"></i> <?= sprintf(__('Hello, %s'), $user_nick) ?> <a href="<?= locale_base_url() . "auth/logout/" ?>"><?= __('Logout') ?></a></div>
             <?php else: ?>
                 <div><a href="<?= locale_base_url() . "auth/logout/" ?>" class="pure-button btn"><?= __('Logout') ?></a></div>
             <?php endif; ?>
